@@ -51,18 +51,23 @@ public class Main {
 						.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 
 				// TODO Imprimir el precio del Bitcon
-
+				System.out.println("el precio del bitcon es" + btcPrice);
+				
 				// Verificar si el precio es mayor al máximo o menor al mínimo
 				if (btcPrice > maxPrice) {
 					// TODO si el precio supera al maximo registrado
 					// actualizar el maximo
 					// e imprimir por pantalla una alerta
+					maxPrice = btcPrice;
+					System.out.println("el maximo esta actualizado");
 				}
 
 				if (btcPrice < minPrice) {
 					// TODO si el precio es inferior al minimo registrado
 					// actualizar el minimo
 					// e imprimir por pantalla una alerta
+					minPrice = btcPrice;
+					System.out.println("el minimo esta actualizado");
 				}
 
 				// Actualizar el archivo CSV con el nuevo precio
